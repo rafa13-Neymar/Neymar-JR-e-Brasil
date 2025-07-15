@@ -1,0 +1,75 @@
+h1,
+h2 {
+    color: gray;
+}
+
+body {
+    margin: 0;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: burlywood;
+    padding: 2rem 1rem;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    width: 90%;
+
+}
+
+.menu ul li {
+    list-style-type: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    text-shadow: 2px 2px 3px black;
+}
+
+header h1 {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    font-size: 58px;
+}
+
+header h2 {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    font-size: 48px;
+}
+
+#logo {
+    height: 15vh;
+}
+
+#backgroundImg {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 80vh;
+}
+
+#carouselExample {
+    max-height: 80vh;
+    margin-bottom: 2rem;
+}
+
+#carouselExample img {
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: top;
+}

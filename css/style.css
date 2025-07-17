@@ -1,6 +1,6 @@
 h1,
 h2 {
-    color: gray;
+    color: black;
 }
 
 body {
@@ -101,13 +101,27 @@ header h2 {
     max-width: 300px;
 }
 
-main {
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    width: 60%;
-    background-color: white;
-    padding: 2rem;
+.objectives,
+.bolaDeOuro,
+.curiosidades {
+    padding: 5rem;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.objectives {
+    background-image: url("../imagens/Maracana.webp");
+}
+
+.bolaDeOuro {
+    background-image: url("../imagens/Palco Bola de Ouro 1.webp");
+}
+
+.curiosidades {
+    background-image: url("../imagens/fundo relvado.avif");
 }
 
 main h1 {
@@ -115,17 +129,24 @@ main h1 {
 }
 
 .mainText {
+    background-color: white;
+    width: 80%;
+    padding: 2rem;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
 }
 
-.mainText p {
+.mainText p,
+.mainText h1 {
     margin: 1rem;
 }
 
-.mainText img {
+.mainText>img {
     width: 40%;
+    object-fit: contain;
 }
 
 .subText {
@@ -136,6 +157,16 @@ main h1 {
 
 .subText img {
     margin-top: 2rem;
+}
+
+.subImg {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.subImg img {
+    margin-bottom: 1rem;
 }
 
 #background {

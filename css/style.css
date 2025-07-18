@@ -7,6 +7,7 @@ body {
     margin: 0;
 }
 
+/* Existing menu styles */
 .menu {
     position: sticky;
     top: 0;
@@ -16,26 +17,50 @@ body {
     height: 20vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 100;
 }
 
-.menu ul {
+.menu a {
+    height: 15vh;
+}
+
+.menu img#logo {
+    height: 100%;
+}
+
+/* Default menu items - hidden on small screens */
+.menu-items {
+    display: flex;
+    width: 90%;
+}
+
+.menu-items ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 0;
+    padding: 0;
     width: 90%;
-
 }
 
-.menu ul li {
+.menu-items ul li {
     list-style-type: none;
 }
 
-.menu ul li a {
+.menu-items ul li a {
     text-decoration: none;
     color: black;
     text-shadow: 2px 2px 3px black;
+}
+
+/* Hamburger styles - hidden by default */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
 }
 
 header h1 {
@@ -153,6 +178,8 @@ main h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
+    padding-right: 1rem;
 }
 
 .subText img {
@@ -169,7 +196,79 @@ main h1 {
     margin-bottom: 1rem;
 }
 
-#background {
+.background {
     width: 100%;
     height: fit-content;
+}
+
+button {
+    margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+    .menu-items {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        height: 100vh;
+        width: 250px;
+        background-color: burlywood;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .menu-items.open {
+        right: 0;
+    }
+
+    .menu-items ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #carouselExample {
+        height: 40vh;
+        margin: 4rem 0;
+    }
+
+    #carouselExample img {
+        height: 40vh;
+    }
+
+    .curiosidades,
+    .bolaDeOuro,
+    .objectives {
+        padding: 2rem;
+    }
+
+    .mainText {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .subText {
+        width: 100%;
+    }
+
+    .subImg {
+        display: none;
+    }
+
+    header h1 {
+        font size: 35px;
+        ;
+    }
+
+    header h2 {
+        top: 65%;
+        font-size: 30px;
+    }
 }
